@@ -1,0 +1,49 @@
+.authentication__container{
+    display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 99vh;
+}
+
+.authentication__container form{
+	text-align: center;
+	background: linear-gradient(90deg, #998df6, #7C78B8);
+	padding: 3rem 3rem 1rem 3rem;
+	box-shadow: 0px 0px 24px #5C5696;
+}
+
+.Authentication__header h1{
+	color: white;
+	margin-top: 0;
+	padding-top: 0;
+}
+
+.Authentication__field{
+	margin: 1.5rem;
+}
+
+.Authentication__field input[type=email], input[type=password] {
+	width: 100%;
+	padding: 6px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+}
+
+.Authentication__submit button{
+	padding: 6px 20px;
+	box-shadow: 0px 0px 24px #5C5696;
+}
+
+.authentication__flip{
+	padding-top: 1.5rem;
+}
+
+.authentication__flip a{
+	text-decoration: none;
+	color: moccasin;
+}
+
+
+
