@@ -1,7 +1,13 @@
-import { useRef } from "react"
+import { useRef, useContext } from "react"
 import Authentication from './Authentication'
 
-export default function Login(props) {
+import { UserContext } from "../../context/UserContext"
+
+export default function Login() {
+
+    const { name, id } = useContext(UserContext)
+    const [userName, setUserName] = name
+    const [userId, setUserId] = id
 
     const refEmail = useRef()
     const refPassword = useRef()
@@ -22,8 +28,11 @@ export default function Login(props) {
             body: JSON.stringify(data)
         })
 
-        if(loginResult.status === 200)
-            props.setIsLogedIn(true)
+        if(loginResult.status === 200){
+            const data = await loginResult.json();
+            setUserId(data.userId)
+        }
+           
     }
 
     return (
